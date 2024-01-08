@@ -13,7 +13,6 @@ function App() {
 
 
   let calcBmi = (event) => {
-    //prevent submitting
     event.preventDefault()
 
     if (weight === 0 || height === 0) {
@@ -21,8 +20,6 @@ function App() {
     } else {
       let bmi = (weight / (height * height) * 703)
       setBmi(bmi.toFixed(1))
-
-      // Logic for message
 
       if (bmi < 25) {
         setMessage('You are underweight')
